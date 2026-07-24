@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: Teammates SmartTools Assign Assignment API
+  version: '0.1'
+  description: API for agents to operate SaaS software with natural language
+servers:
+- url: https://api.teammates.work/v1
+  description: Production API server
+tags:
+- name: Assignment
+paths:
+  /assignment:
+    get:
+      summary: Get assignment result
+      description: Retrieves the current status or result of an assignment
+      parameters:
+      - $ref: '#/components/parameters/AssignmentId'
+      responses:
+        '200':
+          $ref: '#/components/responses/AssignmentResult'
+      tags:
+      - Assignment
+components:
+  responses:
+    AssignmentResult:
+      description: Assignment status or result
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AssignmentResultResponse'
+  schemas:
+    AssignmentResultResponse:
+      type: object
+      required:
+      - status
+      - duration
+      properties:
+        status:
+          type: string
+          enum:
+          - complete
+          - unstarted
+          - in_progress
+          - failed
+          - waiting_for_others
+          - canceled
+          - clarification_required
+          description: Current status of the assignment
+        duration:
+          type: integer
+          description: Duration of the assignment execution in seconds
+        result:
+          type: string
+          description: JSON string containing the result data (only present when status is complete)
+          format: json
+        details:
+          type: object
+          description: Additional details about the assignment execution
+          example:
+            steps_completed: 3
+            last_action: Updated cell F3 with new value
+            affected_items:
+            - Sheet1!F3
+            tool_specific_info:
+              spreadsheet_name: Q4 Planning
+              worksheet: Budget
+  parameters:
+    AssignmentId:
+      name: assignment_id
+      in: query
+      required: true
+      schema:
+        type: string
+        format: uuid
+      description: The ID of the assignment to check
+      example: 87fb989d-46dc-4a5c-af5d-de772f8e9ebc

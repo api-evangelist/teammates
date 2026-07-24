@@ -1,0 +1,91 @@
+openapi: 3.0.0
+info:
+  title: Teammates SmartTools Assign API
+  version: '0.1'
+  description: API for agents to operate SaaS software with natural language
+servers:
+- url: https://api.teammates.work/v1
+  description: Production API server
+tags:
+- name: Assign
+paths:
+  /assign:
+    post:
+      summary: Execute a new assignment
+      description: Initiates a new assignment execution for a specified tool with given parameters
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExecuteAssignmentRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/AssignmentEnqueued'
+      tags:
+      - Assign
+components:
+  schemas:
+    AssignmentEnqueuedResponse:
+      type: object
+      properties:
+        assignment_id:
+          type: string
+          format: uuid
+          description: Unique identifier for the assignment. Save this ID to retrieve the result later.
+      required:
+      - assignment_id
+      example:
+        assignment_id: 87fb989d-46dc-4a5c-af5d-de772f8e9ebc
+    ExecuteAssignmentRequest:
+      type: object
+      required:
+      - tool
+      - prompt
+      properties:
+        tool:
+          type: string
+          description: The tool to execute
+          enum:
+          - airtable
+          - asana
+          - dropbox
+          - github
+          - gmail
+          - google_docs
+          - google_drive
+          - google_sheets
+          - google_slides
+          - hubspot
+          - jira
+          - microsoft_365_excel
+          - microsoft_365_word
+          - salesforce
+          - shopify
+          - slack
+          - trello
+          - zendesk
+          example: google_sheets
+        prompt:
+          type: string
+          description: A natural language description of the task to be performed
+          example: Update issue with ID 4 to status OK
+        data:
+          type: object
+          description: Additional data to be used in the assignment execution
+          example:
+            issue_id: 4
+            new_status: OK
+            priority: high
+        webhook_url:
+          type: string
+          format: uri
+          description: URL to receive status updates when the assignment is complete
+          example: https://api.yourapp.com/webhooks/assignment-updates
+  responses:
+    AssignmentEnqueued:
+      description: Assignment successfully enqueued
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AssignmentEnqueuedResponse'
