@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/teammates-smarttools-openapi.yaml
+entities:
+  - name: Assignment
+    description: >-
+      A unit of work handed to a teammate: a natural-language prompt executed
+      against a named Smart Tool, tracked from enqueue to completion.
+    identifier: assignment_id
+    identifier_format: uuid
+    fields:
+      - {name: tool, type: string, note: 'enum of supported Smart Tools (airtable, asana, github, gmail, salesforce, slack, ...)'}
+      - {name: prompt, type: string, note: natural-language task description}
+      - {name: data, type: object, note: optional structured data for the task}
+      - {name: webhook_url, type: uri, note: optional completion callback}
+      - {name: status, type: string, note: 'complete | unstarted | in_progress | failed | waiting_for_others | canceled | clarification_required'}
+      - {name: duration, type: integer, note: execution seconds}
+      - {name: result, type: string, note: JSON string result (present when complete)}
+      - {name: details, type: object, note: execution details (steps_completed, last_action, tool_specific_info)}
+    operations:
+      - 'POST /assign (create/enqueue)'
+      - 'GET /assignment (read status/result)'
+  - name: SmartTool
+    description: >-
+      A connection between a teammate and a third-party SaaS application
+      (OAuth / API key / access token), referenced by the Assignment.tool enum.
+    referenced_by:
+      - {entity: Assignment, via: tool, cardinality: belongs_to}
+relationships:
+  - {from: Assignment, to: SmartTool, type: belongs_to, via: tool}
+render: null

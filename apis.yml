@@ -1,8 +1,16 @@
 aid: teammates
 name: Teammates
-description: 'Teammates is a company surfaced as a portfolio company of matrix-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: b2b. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Teammates ("AI that works") is Super Duper Labs' end-to-end platform for
+  designing and managing a virtual AI workforce. Companies create AI teammates
+  that autonomously execute natural-language assignments across the SaaS tools
+  their human teams already use — Salesforce, GitHub, Gmail, Slack, Google
+  Workspace, Microsoft 365, Jira, HubSpot and more — through Smart Tools
+  connections, reusable skills, event-driven rules and triggers, a secure
+  password manager, and human-in-the-loop escalation. The public SmartTools API
+  (api.teammates.work/v1) lets developers enqueue assignments against a named
+  tool with a natural-language prompt and retrieve results by polling or webhook.
+  Usage-based pricing (Team / Business / Enterprise). Backed by Matrix Partners.
 url: https://raw.githubusercontent.com/api-evangelist/teammates/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +18,56 @@ x-backed-by:
 - matrix-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/66f1c713e9cce059a0faaf67/683bb044870f2478d1e2f664_page-cover-default.jpg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - B2B
-apis: []
+- Artificial Intelligence
+- AI Agents
+- Virtual Workforce
+- Automation
+- Productivity
+- SaaS
+- MCP
+apis:
+- aid: teammates:teammates-assign-api
+  name: Teammates Assign API
+  description: The Assign API from Teammates — 1 operation(s) for assign.
+  humanURL: https://docs.teammates.work/capabilities/smart-tools
+  baseURL: https://api.teammates.work/v1
+  tags:
+  - Assign
+  properties:
+  - type: OpenAPI
+    url: openapi/teammates-assign-api-openapi.yml
+  - type: APIReference
+    url: https://docs.teammates.work/capabilities/smart-tools
+- aid: teammates:teammates-assignment-api
+  name: Teammates Assignment API
+  description: The Assignment API from Teammates — 1 operation(s) for assignment.
+  humanURL: https://docs.teammates.work/capabilities/smart-tools
+  baseURL: https://api.teammates.work/v1
+  tags:
+  - Assignment
+  properties:
+  - type: OpenAPI
+    url: openapi/teammates-assignment-api-openapi.yml
+  - type: APIReference
+    url: https://docs.teammates.work/capabilities/smart-tools
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +76,54 @@ maintainers:
 common:
 - type: Website
   url: https://teammates.work
+- type: DeveloperPortal
+  url: https://docs.teammates.work/
+- type: Documentation
+  url: https://docs.teammates.work/capabilities/smart-tools
+- type: GettingStarted
+  url: https://docs.teammates.work/getting-started
+- type: Blog
+  url: https://www.teammates.work/blog
+- type: Pricing
+  url: https://www.teammates.work/pricing
+- type: SignUp
+  url: https://app.teammates.work/public/create-a-teammate
+- type: Login
+  url: https://app.teammates.work/
+- type: TermsOfService
+  url: https://www.teammates.work/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.teammates.work/privacy-policy
+- type: Support
+  url: mailto:support@teammates.work
+- type: GitHubOrganization
+  url: https://github.com/teammates-work
+- type: TrustCenter
+  url: https://trust.teammates.work/
+- type: Twitter
+  url: https://x.com/teammates_work
+- type: LinkedIn
+  url: https://www.linkedin.com/company/teammates-work/
+- type: ChangeLog
+  url: changelog/teammates-changelog.yml
+- type: LLMsTxt
+  url: llms/teammates-llms.txt
+- type: MCPServer
+  url: mcp/teammates-mcp.yml
+- type: Webhooks
+  url: asyncapi/teammates-webhooks.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Conventions
+  url: conventions/teammates-conventions.yml
+- type: DataModel
+  url: data-model/teammates-data-model.yml
+- type: DomainSecurity
+  url: security/teammates-domain-security.yml
+- type: AgenticAccess
+  url: agentic-access/teammates-agentic-access.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1

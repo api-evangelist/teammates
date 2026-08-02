@@ -1,0 +1,54 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.teammates.work/changelog
+scheme: weekly-dated
+notes: >-
+  Teammates publishes a weekly-dated product changelog (Feature / Improvement /
+  New Skill / Skill Update entries) covering the AI-teammate platform. Recent
+  window captured below; the live changelog is the source of truth.
+entries:
+  - date: '2025-10-02'
+    type: Feature
+    highlight: New Teammate creation wizard — guided step-by-step flow for adding teammates.
+  - date: '2025-09-05'
+    type: New Skill
+    highlight: Image Editing skill — edit existing images or create new visuals from references.
+  - date: '2025-08-26'
+    type: Feature
+    highlight: In-app Help Center with a "Setup my Teammate" guide.
+  - date: '2025-08-18'
+    type: Update
+    breaking: false
+    highlight: >-
+      New usage-based pricing plans — Team ($49/mo, 25 Assignment Credits),
+      Business ($499/mo, 100 Assignment Credits), Enterprise (custom).
+  - date: '2025-06-24'
+    type: Improvement
+    highlight: Enhanced memory — teammates remember structured data and concepts across conversations.
+  - date: '2025-06-02'
+    type: Feature
+    highlight: Smart Tool Triggers — teammates automatically respond to events from connected tools.
+  - date: '2025-05-28'
+    type: Feature
+    highlight: >-
+      Password Manager — teammates securely store/access API keys and credentials
+      without exposing them in chat. Browse Web skill added.
+  - date: '2025-05-05'
+    type: New Skill
+    highlight: Query Database skill — teammates access Postgres databases directly with SQL.
+  - date: '2025-04-08'
+    type: Feature
+    highlight: >-
+      Smart Tools explosion — teammates access thousands of third-party SaaS
+      products and APIs (Salesforce, Gmail, GitHub, and more).
+  - date: '2025-03-24'
+    type: Feature
+    highlight: Linear support — teammates can be assigned issues directly in Linear.
+  - date: '2024-12-20'
+    type: Feature
+    highlight: >-
+      Webhook-ready teammates — each teammate gets a unique URL to receive
+      updates from external tools; scheduled and recurring assignments added.
+  - date: '2024-11-29'
+    type: Feature
+    highlight: Teammates join Slack — invite to channels, @-mention, and DM them.

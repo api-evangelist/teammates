@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: openapi/teammates-smarttools-openapi.yaml
+note: >-
+  No official first-party hosted MCP server was found published by Teammates.
+  This is a CANDIDATE tool list derived one-to-one from the SmartTools API
+  operations, for consideration when exposing the API to agents. Teammates
+  itself is an MCP/Smart-Tool *consumer* (its teammates connect to third-party
+  tools); this candidate would expose Teammates' own assignment API as tools.
+server:
+  name: teammates-smarttools
+  transport: http
+  url: null
+tools:
+  - name: run_assignment
+    description: Execute a new assignment against a named Smart Tool with a natural-language prompt.
+    source_operation: openapi/teammates-smarttools-openapi.yaml#POST_/assign
+  - name: get_assignment_result
+    description: Retrieve the current status or result of an assignment by assignment_id.
+    source_operation: openapi/teammates-smarttools-openapi.yaml#GET_/assignment

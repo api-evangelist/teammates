@@ -1,0 +1,7 @@
+generated: '2026-07-21'
+method: generated
+skills:
+  - file: teammates-run-assignment.md
+    name: Run a Teammates assignment
+    api: openapi/teammates-smarttools-openapi.yaml
+    operations: [POST /assign, GET /assignment]

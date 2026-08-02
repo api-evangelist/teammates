@@ -1,0 +1,26 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Teammates SmartTools API
+  version: 1.0.0
+extends: openapi/teammates-smarttools-openapi.yaml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-rating: 3
+      x-apievangelist-notes: >-
+        Real first-party async assignment API. Gaps for a follow-up with the
+        provider: no securitySchemes declared, operations lack operationId,
+        only 200 responses documented (no 4xx/5xx error schema).
+  - target: $.paths['/assign'].post
+    update:
+      operationId: runAssignment
+      tags: [Assignments]
+  - target: $.paths['/assignment'].get
+    update:
+      operationId: getAssignmentResult
+      tags: [Assignments]
+  - target: $
+    update:
+      tags:
+        - name: Assignments
+          description: Enqueue and retrieve teammate assignment executions.

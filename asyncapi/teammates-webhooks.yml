@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.teammates.work/capabilities/smart-tools
+spec_type: Webhooks
+note: >-
+  Teammates documents a webhook surface but publishes no AsyncAPI document.
+  Captured here as a webhook catalog.
+webhooks:
+  - name: assignment-completed
+    direction: outbound
+    trigger: An assignment reaches a terminal status (complete / failed / canceled).
+    subscribe: >-
+      Provide a webhook_url on the POST /assign request body; Teammates POSTs a
+      status update to that URL when the assignment finishes.
+    payload_ref: openapi/teammates-smarttools-openapi.yaml#AssignmentResultResponse
+    source_operation: 'POST /assign (webhook_url field)'
+  - name: teammate-inbound-events
+    direction: inbound
+    trigger: External tools/apps send events to a teammate's unique webhook URL.
+    subscribe: >-
+      Each teammate is issued its own inbound webhook URL. Point third-party
+      tool webhooks (e.g. GitHub issue, Slack message) at that URL and the
+      teammate processes the incoming notification. (Introduced 2024-12-20.)
+    source: changelog/teammates-changelog.yml

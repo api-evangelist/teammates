@@ -1,0 +1,16 @@
+{
+  "provider": "teammates",
+  "sources": [
+    "teammates-assign-api-openapi.yml",
+    "teammates-assignment-api-openapi.yml"
+  ],
+  "outputs": [
+    "teammates-assign-api-openapi.yml",
+    "teammates-assignment-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

@@ -1,0 +1,28 @@
+# Teammates
+
+## Docs
+
+- [Billing](https://docs.teammates.work/administration/billing.md): Paying your Teammates
+- [Human Users](https://docs.teammates.work/administration/users.md): Managing human users
+- [Best Practices](https://docs.teammates.work/best-practices.md): Best practices for working with Teammates
+- [Assignments](https://docs.teammates.work/capabilities/assignments.md): How Teammates get work done
+- [Handbook](https://docs.teammates.work/capabilities/handbook.md): Background information, policies, and procedures that teammates use to plan their work
+- [Human in the Loop](https://docs.teammates.work/capabilities/human-in-the-loop.md): Teammates can ask a human for more information, to clarify ambiguous instructions, to seek approval, or to escalate a problem.
+- [Password Manager](https://docs.teammates.work/capabilities/password-manager.md): Give teammates secure access to sensitive information
+- [Rules](https://docs.teammates.work/capabilities/rules.md): Help Teammates respond to external events
+- [Skills](https://docs.teammates.work/capabilities/skills.md): What can your teammates do?
+- [Smart Tools](https://docs.teammates.work/capabilities/smart-tools.md): Connecting to your digital tools
+- [Working Together](https://docs.teammates.work/capabilities/working-together.md): Teammates collaborating with each other
+- [Changelog](https://docs.teammates.work/changelog.md): What's new with Teammates
+- [Communication](https://docs.teammates.work/collaboration/communication.md): Interacting and communicating with your teammates
+- [Google Workspace](https://docs.teammates.work/collaboration/google-workspace.md): How to use Google Workspace with your teammates
+- [Microsoft 365](https://docs.teammates.work/collaboration/microsoft-365.md): How to use Microsoft 365 with your teammates
+- [Slack](https://docs.teammates.work/collaboration/slack.md): How to use Slack with your teammates
+- [Getting Started](https://docs.teammates.work/getting-started.md): Onboard your first teammate
+- [Glossary](https://docs.teammates.work/glossary.md): Understand Our Terminology
+- [Introducing Teammates](https://docs.teammates.work/introduction.md): AI That Works
+- [Quickstart: Meeting Prep](https://docs.teammates.work/quickstarts/meeting-prep.md): How to prepare for a meeting with your teammates
+
+## OpenAPI Specs
+
+- [openapi](https://docs.teammates.work/smart-tools/openapi.yaml)

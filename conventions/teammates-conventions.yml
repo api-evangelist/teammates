@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/teammates-smarttools-openapi.yaml
+docs: https://docs.teammates.work/capabilities/smart-tools
+summary: >-
+  The Teammates SmartTools API uses an asynchronous enqueue-and-poll execution
+  model: POST /assign enqueues a natural-language assignment against a named tool
+  and returns an assignment_id; the caller then polls GET /assignment or receives
+  an optional webhook callback when the assignment completes.
+conventions:
+  execution_model:
+    style: async-enqueue-poll
+    enqueue: 'POST /assign -> { assignment_id }'
+    poll: 'GET /assignment?assignment_id=... -> { status, duration, result, details }'
+    statuses: [unstarted, in_progress, complete, failed, waiting_for_others, canceled, clarification_required]
+  callbacks:
+    webhook: true
+    field: webhook_url
+    behavior: >-
+      An optional webhook_url on the /assign request receives a status update
+      when the assignment is complete. Additionally, each teammate can be issued
+      its own inbound webhook URL to receive events from external tools.
+  request_body:
+    content_type: application/json
+    required_fields: [tool, prompt]
+    optional_fields: [data, webhook_url]
+  identifiers:
+    assignment_id: uuid
+  idempotency:
+    supported: false
+    note: No idempotency-key header or parameter is declared in the published spec.
+  pagination:
+    supported: false
+  versioning:
+    scheme: uri-path
+    current: v1
+    base_url: https://api.teammates.work/v1
+  error_envelope:
+    note: >-
+      The published v0.1 spec documents only 200 responses; no error envelope or
+      4xx/5xx schema is defined. Error semantics are surfaced via the assignment
+      status field (e.g. failed, clarification_required).
+cross_links:
+  data_model: data-model/teammates-data-model.yml
+  webhooks: asyncapi/teammates-webhooks.yml
+  changelog: changelog/teammates-changelog.yml
