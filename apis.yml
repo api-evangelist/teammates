@@ -30,7 +30,7 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://cdn.prod.website-files.com/66f1c713e9cce059a0faaf67/683bb044870f2478d1e2f664_page-cover-default.jpg
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-21'
 tags:
