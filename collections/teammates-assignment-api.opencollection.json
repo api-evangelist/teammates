@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Teammates SmartTools Assign Assignment API",
+    "version": "0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Assignment",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get assignment result",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.teammates.work/v1/assignment",
+            "params": [
+              {
+                "name": "assignment_id",
+                "value": "87fb989d-46dc-4a5c-af5d-de772f8e9ebc",
+                "type": "query",
+                "description": "The ID of the assignment to check"
+              }
+            ]
+          },
+          "docs": "Retrieves the current status or result of an assignment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

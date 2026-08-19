@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "41292431-d2cc-4a7b-9660-2125840a0462",
+      "name": "Assign",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6b6136ed-788f-4148-9c11-3f9e6d3c49fc",
+          "name": "Execute a new assignment",
+          "request": {
+            "name": "Execute a new assignment",
+            "description": {
+              "content": "Initiates a new assignment execution for a specified tool with given parameters",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "assign"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tool\": \"<string>\",\n  \"prompt\": \"<string>\",\n  \"data\": \"<object>\",\n  \"webhook_url\": \"<uri>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "990602d9-0081-4d33-92a0-00b60434474f",
+              "name": "Assignment successfully enqueued",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "assign"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tool\": \"google_sheets\",\n  \"prompt\": \"Update issue with ID 4 to status OK\",\n  \"data\": {\n    \"issue_id\": 4,\n    \"new_status\": \"OK\",\n    \"priority\": \"high\"\n  },\n  \"webhook_url\": \"https://api.yourapp.com/webhooks/assignment-updates\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"assignment_id\": \"87fb989d-46dc-4a5c-af5d-de772f8e9ebc\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.teammates.work/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8cb5e71d-ad0b-4bfc-80a8-50d8f5ea8a06",
+    "name": "Teammates SmartTools Assign API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for agents to operate SaaS software with natural language",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "item": [
+    {
+      "id": "c69dc3bb-32de-4461-b806-29249899e6e6",
+      "name": "Assignment",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bf658579-0b7a-4308-b16b-53349b28bc67",
+          "name": "Get assignment result",
+          "request": {
+            "name": "Get assignment result",
+            "description": {
+              "content": "Retrieves the current status or result of an assignment",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "assignment"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "assignment_id",
+                  "value": "<uuid>",
+                  "description": "(Required) The ID of the assignment to check"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "094dd955-7358-4e65-9e09-b3f2f701d94d",
+              "name": "Assignment status or result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "assignment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "assignment_id",
+                      "value": "87fb989d-46dc-4a5c-af5d-de772f8e9ebc"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"unstarted\",\n  \"duration\": 4217,\n  \"result\": \"string\",\n  \"details\": {\n    \"steps_completed\": 3,\n    \"last_action\": \"Updated cell F3 with new value\",\n    \"affected_items\": [\n      \"Sheet1!F3\"\n    ],\n    \"tool_specific_info\": {\n      \"spreadsheet_name\": \"Q4 Planning\",\n      \"worksheet\": \"Budget\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.teammates.work/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "263150be-a27f-4f4a-ac89-9c4cf64db424",
+    "name": "Teammates SmartTools Assign Assignment API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for agents to operate SaaS software with natural language",
+      "type": "text/plain"
+    }
+  }
+}
