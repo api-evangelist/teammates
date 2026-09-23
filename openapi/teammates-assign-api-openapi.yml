@@ -1,4 +1,4 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   title: Teammates SmartTools Assign API
   version: '0.1'
@@ -24,7 +24,16 @@ paths:
           $ref: '#/components/responses/AssignmentEnqueued'
       tags:
       - Assign
+      operationId: postAssign
+      x-operation-id-source: derived
 components:
+  responses:
+    AssignmentEnqueued:
+      description: Assignment successfully enqueued
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AssignmentEnqueuedResponse'
   schemas:
     AssignmentEnqueuedResponse:
       type: object
@@ -82,10 +91,3 @@ components:
           format: uri
           description: URL to receive status updates when the assignment is complete
           example: https://api.yourapp.com/webhooks/assignment-updates
-  responses:
-    AssignmentEnqueued:
-      description: Assignment successfully enqueued
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/AssignmentEnqueuedResponse'

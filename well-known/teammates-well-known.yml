@@ -1,17 +1,31 @@
 generated: '2026-07-21'
 method: searched
 source: live probes of teammates.work / app.teammates.work / docs.teammates.work
-note: >-
-  No /.well-known discovery documents are published. All probed paths returned
-  404 (or no response). Recorded as honest negative data — no WellKnown or
-  SecurityTxt pointer is emitted because nothing was found.
+note: No /.well-known discovery documents are published. All probed paths returned 404 (or no response).
+  Recorded as honest negative data — no WellKnown or SecurityTxt pointer is emitted because nothing was
+  found.
 host: https://teammates.work
-documents:
-  - {path: /.well-known/security.txt, host: teammates.work, status: 404}
-  - {path: /.well-known/security.txt, host: www.teammates.work, status: 404}
-  - {path: /.well-known/security.txt, host: docs.teammates.work, status: 404}
-  - {path: /.well-known/openid-configuration, host: teammates.work, status: 404}
-  - {path: /.well-known/openid-configuration, host: app.teammates.work, status: 404}
-  - {path: /.well-known/oauth-authorization-server, host: teammates.work, status: 404}
-  - {path: /.well-known/api-catalog, host: teammates.work, status: 404}
-  - {path: /.well-known/ai-plugin.json, host: teammates.work, status: 404}
+hosts:
+- host: https://teammates.work
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.

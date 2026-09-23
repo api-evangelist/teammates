@@ -1,8 +1,7 @@
 {
   "provider": "teammates",
   "sources": [
-    "teammates-assign-api-openapi.yml",
-    "teammates-assignment-api-openapi.yml"
+    "_original/teammates-smarttools-openapi.yaml"
   ],
   "outputs": [
     "teammates-assign-api-openapi.yml",
@@ -11,6 +10,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "teammates-smarttools-openapi.yaml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "teammates-smarttools-openapi.yaml: tagged paths POST /assign -> Assign",
+    "teammates-smarttools-openapi.yaml: tagged paths GET /assignment -> Assignment",
+    "teammates-smarttools-openapi.yaml: declared missing tag: Assign",
+    "teammates-smarttools-openapi.yaml: declared missing tag: Assignment",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "teammates-assign-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teammates-assignment-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

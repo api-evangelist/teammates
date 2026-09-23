@@ -1,6 +1,6 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Teammates SmartTools Assign Assignment API
+  title: Teammates SmartTools Assignment API
   version: '0.1'
   description: API for agents to operate SaaS software with natural language
 servers:
@@ -20,14 +20,9 @@ paths:
           $ref: '#/components/responses/AssignmentResult'
       tags:
       - Assignment
+      operationId: getAssignment
+      x-operation-id-source: derived
 components:
-  responses:
-    AssignmentResult:
-      description: Assignment status or result
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/AssignmentResultResponse'
   schemas:
     AssignmentResultResponse:
       type: object
@@ -74,3 +69,10 @@ components:
         format: uuid
       description: The ID of the assignment to check
       example: 87fb989d-46dc-4a5c-af5d-de772f8e9ebc
+  responses:
+    AssignmentResult:
+      description: Assignment status or result
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AssignmentResultResponse'
