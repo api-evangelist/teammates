@@ -23,6 +23,13 @@ paths:
       operationId: getAssignment
       x-operation-id-source: derived
 components:
+  responses:
+    AssignmentResult:
+      description: Assignment status or result
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AssignmentResultResponse'
   schemas:
     AssignmentResultResponse:
       type: object
@@ -69,10 +76,3 @@ components:
         format: uuid
       description: The ID of the assignment to check
       example: 87fb989d-46dc-4a5c-af5d-de772f8e9ebc
-  responses:
-    AssignmentResult:
-      description: Assignment status or result
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/AssignmentResultResponse'

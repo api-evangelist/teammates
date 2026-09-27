@@ -27,13 +27,6 @@ paths:
       operationId: postAssign
       x-operation-id-source: derived
 components:
-  responses:
-    AssignmentEnqueued:
-      description: Assignment successfully enqueued
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/AssignmentEnqueuedResponse'
   schemas:
     AssignmentEnqueuedResponse:
       type: object
@@ -91,3 +84,10 @@ components:
           format: uri
           description: URL to receive status updates when the assignment is complete
           example: https://api.yourapp.com/webhooks/assignment-updates
+  responses:
+    AssignmentEnqueued:
+      description: Assignment successfully enqueued
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AssignmentEnqueuedResponse'
