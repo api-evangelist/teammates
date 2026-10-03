@@ -28,17 +28,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    AssignmentEnqueuedResponse:
-      type: object
-      properties:
-        assignment_id:
-          type: string
-          format: uuid
-          description: Unique identifier for the assignment. Save this ID to retrieve the result later.
-      required:
-      - assignment_id
-      example:
-        assignment_id: 87fb989d-46dc-4a5c-af5d-de772f8e9ebc
     ExecuteAssignmentRequest:
       type: object
       required:
@@ -84,6 +73,17 @@ components:
           format: uri
           description: URL to receive status updates when the assignment is complete
           example: https://api.yourapp.com/webhooks/assignment-updates
+    AssignmentEnqueuedResponse:
+      type: object
+      properties:
+        assignment_id:
+          type: string
+          format: uuid
+          description: Unique identifier for the assignment. Save this ID to retrieve the result later.
+      required:
+      - assignment_id
+      example:
+        assignment_id: 87fb989d-46dc-4a5c-af5d-de772f8e9ebc
   responses:
     AssignmentEnqueued:
       description: Assignment successfully enqueued
