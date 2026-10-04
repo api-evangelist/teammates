@@ -23,16 +23,6 @@ paths:
       operationId: getAssignment
       x-operation-id-source: derived
 components:
-  parameters:
-    AssignmentId:
-      name: assignment_id
-      in: query
-      required: true
-      schema:
-        type: string
-        format: uuid
-      description: The ID of the assignment to check
-      example: 87fb989d-46dc-4a5c-af5d-de772f8e9ebc
   schemas:
     AssignmentResultResponse:
       type: object
@@ -69,6 +59,16 @@ components:
             tool_specific_info:
               spreadsheet_name: Q4 Planning
               worksheet: Budget
+  parameters:
+    AssignmentId:
+      name: assignment_id
+      in: query
+      required: true
+      schema:
+        type: string
+        format: uuid
+      description: The ID of the assignment to check
+      example: 87fb989d-46dc-4a5c-af5d-de772f8e9ebc
   responses:
     AssignmentResult:
       description: Assignment status or result
