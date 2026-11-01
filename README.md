@@ -64,6 +64,124 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Teammates is a company surfaced as a portfolio company of matrix-partners and added to the API Evangelist network as a stub for enrichment. Sector: b2b. This profile is a lead awaiting the enrichment pipeline.
+Teammates ("AI that works") is Super Duper Labs' end-to-end platform for designing and managing a virtual AI workforce. Companies create AI teammates that autonomously execute natural-language assignments across the SaaS tools their human teams already use — Salesforce, GitHub, Gmail, Slack, Google Workspace, Microsoft 365, Jira, HubSpot and more — through Smart Tools connections, reusable skills, event-driven rules and triggers, a secure password manager, and human-in-the-loop escalation. The public SmartTools API (api.teammates.work/v1) lets developers enqueue assignments against a named tool with a natural-language prompt and retrieve results by polling or webhook. Usage-based pricing (Team / Business / Enterprise). Backed by Matrix Partners.
 
-Backed by: matrix-partners — https://teammates.work
+**Areas:** Company · B2B · Artificial Intelligence · AI Agents · Virtual Workforce · Automation · Productivity · Software-as-a-Service · MCP
+
+## Teammates on APIs.io
+
+Everything profiled for Teammates is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/teammates/](https://apis.io/providers/teammates/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Teammates Assign API](https://apis.io/apis/teammates/teammates-assign-api/) — The Assign API from Teammates — 1 operation(s) for assign.
+- [Teammates Assignment API](https://apis.io/apis/teammates/teammates-assignment-api/) — The Assignment API from Teammates — 1 operation(s) for assignment.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Teammates Webhooks](https://apis.io/asyncapis/teammates/teammates-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [teammates-smarttools](https://apis.io/servers/teammates/teammates-smarttools/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Teammates Agentic Access](https://apis.io/agentic-access/teammates/teammates-agentic-access/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [Teammates SmartTools Assign API](https://apis.io/collections/teammates/open-teammates-assign-api/)
+- [Teammates SmartTools Assign Assignment API](https://apis.io/collections/teammates/open-teammates-assignment-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Teammates Smarttools Overlay](https://apis.io/overlays/teammates/teammates-smarttools-overlay/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Teammates Domain Security](https://apis.io/security/teammates/teammates-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://teammates.work)
+- [Documentation](https://docs.teammates.work/capabilities/smart-tools)
+- [Getting started](https://docs.teammates.work/getting-started)
+- [Pricing](https://www.teammates.work/pricing)
+- [Sign up](https://app.teammates.work/public/create-a-teammate)
+- [Blog](https://www.teammates.work/blog)
+- [Trust centre](https://trust.teammates.work/)
+- [Terms of service](https://www.teammates.work/terms-of-service)
+- [Privacy policy](https://www.teammates.work/privacy-policy)
+- [GitHub](https://github.com/teammates-work)
+
+## API Evangelist rating
+
+**Kin Score 36.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 48.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 45.8 |
+| Access clarity | 26.3 |
+
+**Agent readiness 20.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/teammates/](https://apis.io/providers/teammates/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Teammates: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/teammates/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
